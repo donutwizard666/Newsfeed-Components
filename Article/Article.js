@@ -85,7 +85,24 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+   title: 'Is coding Magic?',
+   date: 'Oct 2nd, 2019 ',
+   firstParagraph: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+   secondParagraph: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+   thirdParagraph: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  },
+  {
+    title: 'Should You Eat Pizza While You Code',
+    date: 'Oct 2nd, 2019',
+    firstParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque viverra justo nec ultrices dui. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Dictum fusce ut placerat orci nulla pellentesque dignissim. Maecenas sed enim ut sem viverra aliquet. Eu facilisis sed odio morbi quis commodo odio. Aliquam sem et tortor consequat id porta nibh. Nec ultrices dui sapien eget mi proin sed libero. Enim tortor at auctor urna nunc id cursus metus. Augue lacus viverra vitae congue eu. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Enim nunc faucibus a pellentesque sit amet porttitor eget. Nulla pellentesque dignissim enim sit amet. Tempor id eu nisl nunc mi ipsum. Phasellus vestibulum lorem sed risus ultricies. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Rhoncus aenean vel elit scelerisque. Erat velit scelerisque in dictum non consectetur. Dictum non consectetur a erat nam at lectus. Ut sem nulla pharetra diam sit amet nisl.",
+    secondParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque viverra justo nec ultrices dui. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Dictum fusce ut placerat orci nulla pellentesque dignissim. Maecenas sed enim ut sem viverra aliquet. Eu facilisis sed odio morbi quis commodo odio. Aliquam sem et tortor consequat id porta nibh. Nec ultrices dui sapien eget mi proin sed libero. Enim tortor at auctor urna nunc id cursus metus. Augue lacus viverra vitae congue eu. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Enim nunc faucibus a pellentesque sit amet porttitor eget. Nulla pellentesque dignissim enim sit amet. Tempor id eu nisl nunc mi ipsum. Phasellus vestibulum lorem sed risus ultricies. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Rhoncus aenean vel elit scelerisque. Erat velit scelerisque in dictum non consectetur. Dictum non consectetur a erat nam at lectus. Ut sem nulla pharetra diam sit amet nisl.",
+    thirdParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque viverra justo nec ultrices dui. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Dictum fusce ut placerat orci nulla pellentesque dignissim. Maecenas sed enim ut sem viverra aliquet. Eu facilisis sed odio morbi quis commodo odio. Aliquam sem et tortor consequat id porta nibh. Nec ultrices dui sapien eget mi proin sed libero. Enim tortor at auctor urna nunc id cursus metus. Augue lacus viverra vitae congue eu. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Enim nunc faucibus a pellentesque sit amet porttitor eget. Nulla pellentesque dignissim enim sit amet. Tempor id eu nisl nunc mi ipsum. Phasellus vestibulum lorem sed risus ultricies. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Rhoncus aenean vel elit scelerisque. Erat velit scelerisque in dictum non consectetur. Dictum non consectetur a erat nam at lectus. Ut sem nulla pharetra diam sit amet nisl.",
+
+
   }
+
 ];
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
@@ -112,3 +129,48 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+
+function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  //I have defined new elements here//
+  const article = document.createElement('div');
+  const header = document.createElement('h2');
+  const pDate = document.createElement('p');
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
+  const p3 = document.createElement('p');
+  const button = document.createElement('span');
+
+  //Defining structure of elements here//
+  article.appendChild(header);
+  article.appendChild(pDate);
+  article.appendChild(p1);
+  article.appendChild(p2);
+  article.appendChild(p3);
+  article.appendChild(button);
+
+  article.classList.add('article');
+  pDate.classList.add('date');
+  button.classList.add('expandButton');
+
+  button.addEventListener('click', () => {
+    article.classList.toggle("article-open");
+  });
+
+  header.textContent = title;
+  pDate.textContent = date;
+  p1.textContent = firstParagraph;
+  p2.textContent = secondParagraph;
+  p3.textContent = thirdParagraph;
+  button.textContent = 'expand';
+  
+
+  return article;
+}
+
+const articles = document.querySelector('.articles');
+
+data.forEach(item => {  //in the data object, for each item, we are going to do this function...//
+  articles.appendChild(createArticle(item.title, item.date, item.firstParagraph, item.secondParagraph, item.thirdParagraph))
+});
+
